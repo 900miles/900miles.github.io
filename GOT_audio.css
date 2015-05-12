@@ -1,0 +1,20 @@
+table {
+    border-spacing: 50px;
+    text-align: center;
+    font-size: 44px;
+}
+
+.box td {
+    background-color: #95d3de;
+    padding: 40px;
+    margin: 4px;
+    border-radius: 10px;
+    
+    cursor: pointer;
+    
+    transition: box-shadow .5s;
+}
+
+.box td:hover {
+    box-shadow: 5px 5px 10px 1px #ccc;
+}
