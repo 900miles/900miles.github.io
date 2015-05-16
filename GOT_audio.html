@@ -2,15 +2,21 @@
     <head>
         <title>Game of Thrones Audio Board</title>
         
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="GOT/GOT_audio.css"/>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
         
         <link rel="SHORTCUT ICON" type="image/png" href="GOT/GOT_icon.png" />
         
+        <script type='text/javascript' src="script.js"></script>
     </head>
     
     <body>
         
-        
+        <div class="container">
+            
         <script>
         
             var ids = ["main", "sad"];
@@ -37,8 +43,14 @@
                 <td onclick="stop()">Stop All</td>
             </tr>
             <tr>
-                <td onclick="play('sad')">Sad<audio id="sad" src="GOT/Music/Goodbye_Brother.mp3" loop></td>
-            </td>
+                <td onclick="play('sad')">Sad<audio id="sad" src="GOT/Music/Goodbye_Brother.mp3" loop></audio></td>
+            </tr>   
         </table>
+        
+        <br />
+            
+        <a href="index.html" class="back">&lt;&lt; Back</a>
+            
+        </div>
     </body> 
 </HTML>

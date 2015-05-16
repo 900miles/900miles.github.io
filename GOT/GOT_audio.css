@@ -1,20 +1,43 @@
+body {
+    
+    color: #e2e2e2;
+}
+
+/* Grid Styling */
+
 table {
     border-spacing: 50px;
     text-align: center;
     font-size: 44px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .box td {
-    background-color: #95d3de;
+    background-color: #546E7A;
+
     padding: 40px;
     margin: 4px;
     border-radius: 10px;
     
     cursor: pointer;
     
-    transition: box-shadow .5s;
+    transition: all .5s;
 }
 
 .box td:hover {
-    box-shadow: 5px 5px 10px 1px #ccc;
+    box-shadow: 5px 5px 10px 1px #111;
+    transform: scale(1.05);
+}
+
+/* Back Link Styling */
+
+.back {
+    margin-left: 1em;
+    
+    transition: all .5s;
+}
+
+.back:hover {
+    margin-left: 1.5em;
 }
