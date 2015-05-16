@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/*
+.red {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+    
+    background-color: red;
+    
+    transition: all 0.25s ease-in-out;
+}
+
+.blue {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    z-index: 3;
+    
+    border-radius: 50%;
+    
+    background-color: blue;
+    
+    transition: all 0.25s ease-in-out;
+}
+
+*/

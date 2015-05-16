@@ -1,0 +1,33 @@
+body {
+    background-color: #263238;
+    
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    
+    color: #e2e2e2;
+}
+
+a {
+    
+    color: #e2e2e2;
+    text-decoration: none;
+}
+
+/* Back Link Styling */
+
+.back {
+    margin-left: 1em;
+    
+    transition: all .5s;
+    
+    position: relative;
+    z-index: 1000;
+    
+
+}
+
+.back:hover {
+    margin-left: 1.5em;
+}
+
