@@ -23,17 +23,28 @@
     
     font-size: 25px;
     
-    opacity: 0;
-    -webkit-animation: fadeIn 1s 0.05s 1 forwards;
+    opacity: 1;
     animation: fadeIn 1s 0.05s 1 forwards;
+    -webkit-animation: fadeIn 1s 0.05s 1 forwards;
+    -ms-animation: fadeIn 1s 0.05s 1 forwards;
     
 }
+
 
 .projects td:hover {
     
     transform: scale(1.1);
     box-shadow: 0px 0px 20px 1px #000;
     
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0s;
+    }
+    to {
+        opacity: 1s;
+    }
 }
 
 @-webkit-keyframes fadeIn {
@@ -45,12 +56,11 @@
     }
 }
 
-@keyframes fadeIn {
+@-ms-keyframes fadeIn {
     from {
-        opacity: 0s;
+        opacity: 0;
     }
     to {
-        opacity: 1s;
+        opacity: 1;
     }
 }
-            
