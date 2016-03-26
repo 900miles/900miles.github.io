@@ -1,0 +1,10 @@
+.pi {
+    font-size: 30em;
+}
+input[type="text"] {
+    border: 0;
+    font-size: 16px;
+    padding: 5px;
+    width: 90%
+;
+}
