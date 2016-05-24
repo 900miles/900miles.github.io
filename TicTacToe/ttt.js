@@ -7,8 +7,7 @@ var theCanvas;
 var c;
 var cxt;
 var squaresFilled = 0;
-var w;
-var y;
+var gameover = 0;
 
 //Instanciate Arrays
 window.onload=function(){
@@ -27,6 +26,7 @@ window.onload=function(){
 
 //Game methods
 function canvasClicked(canvasNumber){
+    if(gameover === 0) {
     theCanvas = "canvas"+canvasNumber;
     c = document.getElementById(theCanvas);
     cxt = c.getContext("2d");
@@ -62,6 +62,7 @@ function canvasClicked(canvasNumber){
         
         
     }
+    }
 }
 
 
@@ -77,7 +78,5 @@ function checkForWinners(symbol) {
 
 function playAgain() {
     document.getElementById("alertext").innerHTML += "<br/>Reload to play again!";
-    if(y) {
-        location.reload(true);
-    }
+    gameover = 1;
 }
