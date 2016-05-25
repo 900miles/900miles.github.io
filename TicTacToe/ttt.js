@@ -56,7 +56,7 @@ function canvasClicked(canvasNumber){
         painted[canvasNumber-1] = true;
         squaresFilled++;
         if (squaresFilled==9){
-            document.getElementById("alertext").innerHTML = "Game over!";
+            document.getElementById("alertext").innerHTML = "Catz game!";
         }
         checkForWinners(content[canvasNumber-1]);
         
