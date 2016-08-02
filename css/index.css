@@ -9,7 +9,7 @@ h1 {
     font-weight: 200;
 }
 
-.disabled {
+.disabled * {
   color: #999 !important;
 }
 
