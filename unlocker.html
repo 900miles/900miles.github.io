@@ -1,12 +1,27 @@
 Please contact 323965@guhsd.net to remove this page <br/>
-<input type="text" name="url" id="url"> <button type="button" onclick="clicked()">Go</button>
+<input type="text" name="url" onkeypress="return searchKeyPress(event);" id="url"> <button type="button" onclick="clicked()" id="button">Go</button>
+
+<script>
+function searchKeyPress(e)
+{
+    // look for window.event in case event isn't passed in
+    e = e || window.event;
+    if (e.keyCode == 13)
+    {
+        document.getElementById('button').click();
+        return false;
+    }
+    return true;
+}
+</script>
+
+
 
 <script>
 function clicked() {
-  //alert("yo");
   url = document.getElementById('url').value;
-  if (!/^https?:\/\//i.test(url)) {
-    url = 'https://' + url;
+  if (!/^https?:\/\//i.test(url)) {   //Search for http:// already in URL
+    url = 'https://' + url;           //If not there, add it.
   }
   document.write('<iframe src="' + url + '" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Your browser doesn\'t support iframes</iframe>')
 }
