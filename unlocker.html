@@ -3,9 +3,9 @@
    Please contact <a href="mailto:323965@guhsd.net">323965@guhsd.net</a> if there are any questions. </p><br/>
 <input type="text" name="url" onkeypress="return searchKeyPress(event);" id="url"> <button type="button" onclick="clicked()" id="button">Go</button>
 
+<!-- Allow ENTER keypress -->
 <script>
-function searchKeyPress(e)
-{
+function searchKeyPress(e) {
     // look for window.event in case event isn't passed in
     e = e || window.event;
     if (e.keyCode == 13)
@@ -20,12 +20,30 @@ function searchKeyPress(e)
 
 
 <script>
-function clicked() {
-  url = document.getElementById('url').value;
+//Load url
+function clicked(url) {
+  if (!url) url = document.getElementById('url').value;
   if (!/^https?:\/\//i.test(url)) {   //Search for http:// already in URL
     url = 'https://' + url;           //If not there, add it.
   }
   document.write('<iframe src="' + url + '" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Your browser doesn\'t support iframes</iframe>')
+}
+
+//Load url from GET value
+function getQueryVariable(variable)
+{
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+     for (var i=0;i<vars.length;i++) {
+             var pair = vars[i].split("=");
+             if(pair[0] == variable){return pair[1];}
+     }
+     return(false);
+}
+
+url = getQueryVariable("url");
+if (url) {
+  clicked(url)
 }
 </script>
 
