@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="assets/css/style.css" media="screen" />
+  <link rel="stylesheet" href="assets/css/istyle.css" media="screen and (min-width: 200px) and (max-width: 639px)" />
+
+</head>
+<body class="body-bg">
+
+	<noscript>
+     <div class="container" style="padding-top:20px;">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <p>You do not have javascript enabled <a href="noscript.html">click here to continue</a></p>
+        </div>
+     </div>
+    </noscript>
+
+	<div class="container">	
+			<div class="iframe-container">
+				<iframe class="iframe" id="ls_embed_1474915537" src="https://livestream.com/accounts/21277593/events/6410231/player?width=640&height=360&enableInfoAndActivity=false&autoPlay=true&mute=false" frameborder="0" scrolling="no"></iframe>
+				<script id="iframe-tracking" type="text/javascript" data-embed_id="ls_embed_1474915537" src="//livestream.com/assets/plugins/referrer_tracking.js"></script>
+			</div>		
+			<div id="langs">
+				<div class="button-container">					
+						<a class="active" data-id="ls_embed_1474915537" data-src="https://livestream.com/accounts/21277593/events/6410231/player?width=640&height=360&enableInfoAndActivity=false&autoPlay=true&mute=false">
+							<div class="language active">
+								<h1>PGM</h1>
+							</div>
+						</a>
+				</div>
+				<div class="button-container">
+						<a data-id="ls_embed_1474915800" data-src="https://livestream.com/accounts/21277593/events/6410239/player?width=640&height=360&enableInfoAndActivity=false&autoPlay=true&mute=false">
+							<div class="language">
+								<h1>CAM 1</h1>
+							</div>
+						</a>
+				</div>
+				<div class="button-container">
+						<a data-id="ls_embed_1474915828" data-src="https://livestream.com/accounts/21277593/events/6410361/player?width=640&height=360&enableInfoAndActivity=false&autoPlay=true&mute=false">
+							<div class="language">
+								<h1>CAM 2</h1>
+							</div>
+						</a>
+				</div>
+				<div class="button-container">
+						<a data-id="ls_embed_1474915844" data-src="https://livestream.com/accounts/21277593/events/6410506/player?width=640&height=360&enableInfoAndActivity=false&autoPlay=true&mute=false">
+							<div class="language">
+								<h1>CAM 3</h1>
+							</div>
+						</a>
+				</div>
+				<!--
+				<div class="button-container">
+						<a data-id="ls_embed_1475075454" data-src="">
+							<div class="language">
+								<h1></h1>
+							</div>
+						</a>
+				</div>
+			-->
+				
+			</div>
+			
+
+			
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
