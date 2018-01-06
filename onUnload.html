@@ -15,10 +15,25 @@ window.onbeforeunload = function (event) {
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
     xhr.send();
 };
+    
+function send() {
+    var key = "dIqIQPRs7y75A-mKH20Wov"
+
+    var timeSpent = (new Date()).getTime() - startTime,
+        xmlhttp= new XMLHttpRequest();
+    var ifttt_url = prefix + "://maker.ifttt.com/trigger/url_submitted/with/key/" + key +
+                                "?value1=" + timeSpent;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", ifttt_url, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhr.send();
+};
+    
 </script>
 </head>
 <body>
 <p>Hey there!</p>
+    <button type="button" onclick="send();">Manually send</button>
 </body>
 </html>
 
