@@ -1,25 +1,15 @@
 <HTML>
 <head>
 <script>
-var startTime = (new Date()).getTime();
 
 window.onbeforeunload = function (event) {
-    var key = "dIqIQPRs7y75A-mKH20Wov"
-
-    var timeSpent = (new Date()).getTime() - startTime,
-        xmlhttp= new XMLHttpRequest();
-    var ifttt_url = "http://maker.ifttt.com/trigger/url_submitted/with/key/" + key +
-                                "?value1=" + timeSpent;
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", ifttt_url, true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-    xhr.send();
+    send();
 };
     
 function send() {
     var key = "dIqIQPRs7y75A-mKH20Wov"
 
-    var timeSpent = (new Date()).getTime() - startTime,
+    var timeSpent = (new Date()).getMinutes(),
         xmlhttp= new XMLHttpRequest();
     var ifttt_url = "http://maker.ifttt.com/trigger/url_submitted/with/key/" + key +
                                 "?value1=" + timeSpent;
