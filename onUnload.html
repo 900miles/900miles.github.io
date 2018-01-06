@@ -8,7 +8,7 @@ window.onbeforeunload = function (event) {
 
     var timeSpent = (new Date()).getTime() - startTime,
         xmlhttp= new XMLHttpRequest();
-    var ifttt_url = prefix + "://maker.ifttt.com/trigger/url_submitted/with/key/" + key +
+    var ifttt_url = "http://maker.ifttt.com/trigger/url_submitted/with/key/" + key +
                                 "?value1=" + timeSpent;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", ifttt_url, true);
