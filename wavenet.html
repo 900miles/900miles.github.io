@@ -7,7 +7,18 @@
 </head>
 
 <body>
-    <textarea id="tts-input" style="width:500px; max-width: 70%; height:200px;" ></textarea> <button type="button" id="tts-submit" onclick="send()" style="width: 75px; height: 40px">Go</button>
+    <textarea id="tts-input" style="width:500px; max-width: 70%; height:200px;" ></textarea>
+<br/>
+<select id="voiceList">
+    <option value="en-US-Wavenet-A">US Voice A (M)</option>
+    <option value="en-US-Wavenet-B">US Voice B (M)</option>
+    <option value="en-US-Wavenet-C">US Voice C (F)</option>
+    <option value="en-US-Wavenet-D" selected="selected">US Voice D (M)</option>
+    <option value="en-US-Wavenet-E">US Voice E (F)</option>
+    <option value="en-US-Wavenet-F">US Voice F (F)</option>
+</select>
+
+<button type="button" id="tts-submit" onclick="send()" style="width: 75px; height: 40px">Go</button>
     <div id="voice"></div>
 
 
@@ -21,6 +32,8 @@ function send(text) {
     document.getElementById("voice").innerHTML = "Loading...<br/>";
 
     if (!text) text = document.getElementById('tts-input').value;
+    var e = document.getElementById("voiceList");
+    var voice = e.options[e.selectedIndex].value;
 
     var key = "AIzaSyB91hDPO0xIcBHDuhF6hKGSGHFBDzRfdPE";
 
@@ -32,7 +45,7 @@ function send(text) {
         },
         "voice": {
             "languageCode": "en-US",
-            "name": "en-US-Wavenet-D"
+            "name": voice
         },
         "audioConfig": {
             "audioEncoding": "MP3",
@@ -56,10 +69,6 @@ function send(text) {
         sound.src      = 'data:audio/mp3;base64,' + json.audioContent;
         sound.type     = 'audio/mp3';
         document.getElementById('voice').appendChild(sound);
-
-
-        document.getElementById("area").innerHTML = json.audioContent;
-
     }
 };
 
