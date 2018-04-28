@@ -17,7 +17,7 @@
     <option value="en-US-Wavenet-E">US Voice E (F)</option>
     <option value="en-US-Wavenet-F">US Voice F (F)</option>
 </select>
-
+<input type="text" id="speechRate" value="1.00" />
 <button type="button" id="tts-submit" onclick="send()" style="width: 75px; height: 40px">Go</button>
     <div id="voice"></div>
 
@@ -34,6 +34,7 @@ function send(text) {
     if (!text) text = document.getElementById('tts-input').value;
     var e = document.getElementById("voiceList");
     var voice = e.options[e.selectedIndex].value;
+    var speechRate = document.getElementById("speechRate").value;
 
     var key = "AIzaSyB91hDPO0xIcBHDuhF6hKGSGHFBDzRfdPE";
 
@@ -50,7 +51,7 @@ function send(text) {
         "audioConfig": {
             "audioEncoding": "MP3",
             "pitch": 0.00,
-            "speakingRate": 1.00
+            "speakingRate": speechRate
         }
     });
 
