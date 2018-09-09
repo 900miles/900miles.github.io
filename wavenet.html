@@ -9,6 +9,11 @@
 <body>
     <textarea id="tts-input" style="width:500px; max-width: 70%; height:200px;" ></textarea>
 <br/>
+<select id="countryCode"> 
+    <option value="en-US">en-US</option> 
+    <option value="en-GB">en-GB</option> 
+    <option value="en-AU">en-AU</option>
+</select>
 <select id="voiceList">
     <option value="en-US-Wavenet-A">US Voice A (M)</option>
     <option value="en-US-Wavenet-B">US Voice B (M)</option>
@@ -16,6 +21,9 @@
     <option value="en-US-Wavenet-D" selected="selected">US Voice D (M)</option>
     <option value="en-US-Wavenet-E">US Voice E (F)</option>
     <option value="en-US-Wavenet-F">US Voice F (F)</option>
+    <option value="en-GB-Wavenet-B">UK Voice B (M)</option>
+    <option value="en-AU-Wavenet-B">AU Voice B (M)</option> 
+    <option value="en-AU-Wavenet-D">AU Voice D (M)</option>
 </select>
 <input type="text" id="speechRate" value="1.00" />
 <button type="button" id="tts-submit" onclick="send()" style="width: 75px; height: 40px">Go</button>
@@ -33,6 +41,8 @@ function send(text) {
 
     if (!text) text = document.getElementById('tts-input').value;
     var e = document.getElementById("voiceList");
+    var j = document.getElementById("countryCode");
+    var ccode = j.options[j.selectedIndex].value; 
     var voice = e.options[e.selectedIndex].value;
     var speechRate = document.getElementById("speechRate").value;
 
@@ -45,7 +55,7 @@ function send(text) {
             "text": text
         },
         "voice": {
-            "languageCode": "en-US",
+            "languageCode": ccode,
             "name": voice
         },
         "audioConfig": {
